@@ -81,7 +81,7 @@ class TodoApp:
         """
         Save tasks to a file.
         """
-        with open("tasks.json", "w") as file:
+        with open("tasks.json", "w", encoding="utf-8") as file:
             json.dump(self.tasks, file)
 
     def display_tasks(self):
@@ -94,6 +94,9 @@ class TodoApp:
             self.task_listbox.insert(tk.END, task_text)
     # Other methods with docstrings
 def main():
+    """
+    Main function called.
+    """
     root = tk.Tk()
     app = TodoApp(root)
     root.mainloop()
