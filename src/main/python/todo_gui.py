@@ -23,6 +23,9 @@ class TodoApp:
         self.quit_button = tk.Button(master, text="Quit", command=self.quit_and_save)
         self.quit_button.pack()
     def add_task(self):
+            """
+            Add a task to the task list.
+            """
         task = self.task_entry.get()
         if task:
             self.tasks.append([task, False])  
