@@ -92,13 +92,10 @@ class TodoApp:
         for task in self.tasks:
             task_text = f"{task['task']} {'(Completed)' if task['completed'] else ''}"
             self.task_listbox.insert(tk.END, task_text)
-    
     # Other methods with docstrings
-
 def main():
     root = tk.Tk()
     app = TodoApp(root)
     root.mainloop()
-
 if __name__ == "__main__":
     main()
