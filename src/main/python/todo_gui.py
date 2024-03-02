@@ -9,7 +9,7 @@ class TodoApp:
 
         self.tasks = []
 
-        self.load_tasks()  # Load tasks from file
+        self.load_tasks()
 
         self.task_entry = tk.Entry(master)
         self.task_entry.pack()
@@ -21,7 +21,7 @@ class TodoApp:
         self.task_listbox.pack()
 
         for task in self.tasks:
-            self.task_listbox.insert(tk.END, task[0])  # Display task name only
+            self.task_listbox.insert(tk.END, task[0]) 
 
         self.remove_button = tk.Button(master, text="Remove Task", command=self.remove_task)
         self.remove_button.pack()
@@ -35,7 +35,7 @@ class TodoApp:
     def add_task(self):
         task = self.task_entry.get()
         if task:
-            self.tasks.append([task, False])  # Append task with completed status (False)
+            self.tasks.append([task, False])  
             self.task_listbox.insert(tk.END, task)
             self.task_entry.delete(0, tk.END)
 
@@ -51,8 +51,8 @@ class TodoApp:
         try:
             index = self.task_listbox.curselection()[0]
             task = self.tasks[index]
-            task[1] = True  # Mark task as completed
-            self.task_listbox.itemconfig(index, {'bg': 'light grey'})  # Change background color
+            task[1] = True  
+            self.task_listbox.itemconfig(index, {'bg': 'light grey'}) 
         except IndexError:
             pass
 
