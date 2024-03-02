@@ -25,7 +25,7 @@ class TodoApp:
     def add_task(self):
             """
             Add a task to the task list.
-            """
+            """           
         task = self.task_entry.get()
         if task:
             self.tasks.append([task, False])  
