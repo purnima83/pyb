@@ -98,7 +98,7 @@ def main():
     Main function called.
     """
     root = tk.Tk()
-    app = TodoApp(root)
+    TodoApp(root)
     root.mainloop()
 if __name__ == "__main__":
     main()
