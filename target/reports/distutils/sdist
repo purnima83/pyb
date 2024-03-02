@@ -1,0 +1,33 @@
+running clean
+'build\lib' does not exist -- can't clean it
+'build\bdist.win-amd64' does not exist -- can't clean it
+'build\scripts-3.12' does not exist -- can't clean it
+running sdist
+running egg_info
+creating todo_gui.egg-info
+writing todo_gui.egg-info\PKG-INFO
+writing dependency_links to todo_gui.egg-info\dependency_links.txt
+writing namespace_packages to todo_gui.egg-info\namespace_packages.txt
+writing top-level names to todo_gui.egg-info\top_level.txt
+writing manifest file 'todo_gui.egg-info\SOURCES.txt'
+reading manifest file 'todo_gui.egg-info\SOURCES.txt'
+writing manifest file 'todo_gui.egg-info\SOURCES.txt'
+warning: sdist: standard file not found: should have one of README, README.rst, README.txt, README.md
+
+running check
+creating todo_gui-1.0.dev0
+creating todo_gui-1.0.dev0\todo_gui.egg-info
+copying files to todo_gui-1.0.dev0...
+copying setup.py -> todo_gui-1.0.dev0
+copying todo_gui.py -> todo_gui-1.0.dev0
+copying todo_gui.egg-info\PKG-INFO -> todo_gui-1.0.dev0\todo_gui.egg-info
+copying todo_gui.egg-info\SOURCES.txt -> todo_gui-1.0.dev0\todo_gui.egg-info
+copying todo_gui.egg-info\dependency_links.txt -> todo_gui-1.0.dev0\todo_gui.egg-info
+copying todo_gui.egg-info\namespace_packages.txt -> todo_gui-1.0.dev0\todo_gui.egg-info
+copying todo_gui.egg-info\top_level.txt -> todo_gui-1.0.dev0\todo_gui.egg-info
+copying todo_gui.egg-info\zip-safe -> todo_gui-1.0.dev0\todo_gui.egg-info
+copying todo_gui.egg-info\SOURCES.txt -> todo_gui-1.0.dev0\todo_gui.egg-info
+Writing todo_gui-1.0.dev0\setup.cfg
+creating dist
+Creating tar archive
+removing 'todo_gui-1.0.dev0' (and everything under it)

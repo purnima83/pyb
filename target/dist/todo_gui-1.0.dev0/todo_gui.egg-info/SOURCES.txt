@@ -1,0 +1,8 @@
+setup.py
+todo_gui.py
+todo_gui.egg-info/PKG-INFO
+todo_gui.egg-info/SOURCES.txt
+todo_gui.egg-info/dependency_links.txt
+todo_gui.egg-info/namespace_packages.txt
+todo_gui.egg-info/top_level.txt
+todo_gui.egg-info/zip-safe
