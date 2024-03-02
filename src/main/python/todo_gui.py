@@ -1,4 +1,4 @@
-# todo_gui.py
+ # todo_gui.py
 """
 This module implements a simple to-do list application using Tkinter.
 """
@@ -24,7 +24,7 @@ class TodoApp:
         self.add_button.pack()
         self.task_listbox = tk.Listbox(master)
         self.task_listbox.pack()
-    for task in self.tasks:
+        for task in self.tasks:
         self.task_listbox.insert(tk.END, task[0])
         self.remove_button = tk.Button(
             master,
