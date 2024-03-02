@@ -1,5 +1,7 @@
 # todo_gui.py
-
+"""
+This module implements a simple to-do list application using Tkinter.
+"""
 import tkinter as tk
 
 class TodoApp:
