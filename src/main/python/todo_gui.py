@@ -10,17 +10,33 @@ class TodoApp:
         self.load_tasks()
         self.task_entry = tk.Entry(master)
         self.task_entry.pack()
-        self.add_button = tk.Button(master, text="Add Task", command=self.add_task)
+        self.add_button = tk.Button(
+            master, 
+            text="Add Task", 
+            command=self.add_task
+        )
         self.add_button.pack()
         self.task_listbox = tk.Listbox(master)
         self.task_listbox.pack()
     for task in self.tasks:
         self.task_listbox.insert(tk.END, task[0])
-        self.remove_button = tk.Button(master, text="Remove Task", command=self.remove_task)
-        self.remove_button.pack()
-        self.complete_button = tk.Button(master, text="Mark as Complete", command=self.mark_as_complete)
-        self.complete_button.pack()
-        self.quit_button = tk.Button(master, text="Quit", command=self.quit_and_save)
+        self.remove_button = tk.Button(
+            master, 
+            text="Remove Task", 
+            command=self.remove_task
+         )
+         self.remove_button.pack()
+         self.complete_button = tk.Button(
+             master, 
+             text="Mark as Complete", 
+             command=self.mark_as_complete
+         )
+         self.complete_button.pack()
+         self.quit_button = tk.Button(
+             master, 
+             text="Quit", 
+             command=self.quit_and_save
+         )
         self.quit_button.pack()
     def add_task(self):
         """
