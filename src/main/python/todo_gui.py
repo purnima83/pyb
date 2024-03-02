@@ -72,7 +72,7 @@ class TodoApp:
         Load tasks from a file.
         """
         try:
-            with open("tasks.json", "r") as file:
+            with open("tasks.json", "r", encoding="utf-8") as file:
                 self.tasks = json.load(file)
         except FileNotFoundError:
             self.tasks = []
