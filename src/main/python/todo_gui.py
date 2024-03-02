@@ -5,6 +5,10 @@ This module implements a simple to-do list application using Tkinter.
 import tkinter as tk
 
 class TodoApp:
+    """
+    REpresents a simple to-do list application.
+    This class provides functionality to manage tasks in a to-do list using Tkinter.
+    """
     def __init__(self, master):
         self.master = master
         master.title("To-Do List")
