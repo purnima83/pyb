@@ -14,8 +14,8 @@ class TodoApp:
         self.add_button.pack()
         self.task_listbox = tk.Listbox(master)
         self.task_listbox.pack()
-        for task in self.tasks:
-            self.task_listbox.insert(tk.END, task[0])
+    for task in self.tasks:
+        self.task_listbox.insert(tk.END, task[0])
         self.remove_button = tk.Button(master, text="Remove Task", command=self.remove_task)
         self.remove_button.pack()
         self.complete_button = tk.Button(master, text="Mark as Complete", command=self.mark_as_complete)
@@ -23,9 +23,9 @@ class TodoApp:
         self.quit_button = tk.Button(master, text="Quit", command=self.quit_and_save)
         self.quit_button.pack()
     def add_task(self):
-            """
-            Add a task to the task list.
-            """           
+        """
+        Add a task to the task list.
+        """           
         task = self.task_entry.get()
         if task:
             self.tasks.append([task, False])  
