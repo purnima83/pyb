@@ -1,0 +1,49 @@
+name: SonarQube Analysis
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  sonarqube-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+
+      - name: Build with Maven
+        run: mvn clean package
+
+      - name: SonarQube Scan
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: 'http://localhost:9000'
+          SONAR_PROJECT_KEY: 'my_project_key'
+          SONAR_PROJECT_NAME: 'My Project Name'
+          SONAR_PROJECT_VERSION: '1.0'
+          SONAR_SOURCES: 'src'
+          SONAR_TESTS: 'test'
+          SONAR_JAVA_BINARIES: 'bin'
+          SONAR_LANGUAGE: 'java'
+          SONAR_SOURCE_ENCODING: 'UTF-8'
+        run: sonar-scanner \
+             -Dsonar.host.url=$SONAR_HOST_URL \
+             -Dsonar.login=$SONAR_TOKEN \
+             -Dsonar.projectKey=$SONAR_PROJECT_KEY \
+             -Dsonar.projectName=$SONAR_PROJECT_NAME \
+             -Dsonar.projectVersion=$SONAR_PROJECT_VERSION \
+             -Dsonar.sources=$SONAR_SOURCES \
+             -Dsonar.tests=$SONAR_TESTS \
+             -Dsonar.java.binaries=$SONAR_JAVA_BINARIES \
+             -Dsonar.language=$SONAR_LANGUAGE \
+             -Dsonar.sourceEncoding=$SONAR_SOURCE_ENCODING
